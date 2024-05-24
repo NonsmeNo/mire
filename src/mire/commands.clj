@@ -51,9 +51,7 @@
 
 ; массив слов из 5 букв
 (def words ["apple" "flash" "dream" "happy" "music"
-            "glass" "river" "horse" "table" "chair"
-            "queen" "robot" "pizza" "paper" "book"
-            "movie" "plant" "house" "cloud" "train"])
+            "glass" "river" "horse" "table" "chair"])
 
 (defonce current-word (atom nil)) ; слово, загаданное сервером
 
@@ -92,7 +90,7 @@
                                         guessed))]
                   (if (empty? guessed-letters)
                     (say-server player/*name*", you didn't guess, try again :(")
-                    (say-server player/*name* ", you guessed the first " (count guessed-letters) " letters: " guessed-letters))))))
+                    (say-server player/*name* ", you guessed the first " (/ (count guessed-letters) 2) " letters: " guessed-letters))))))
         (say-server player/*name* ", the word must have 5 letters")))
     (say-server "You need to start the game with the 'start' command first.")))
 
