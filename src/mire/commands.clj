@@ -43,10 +43,10 @@
     (str message)))
 
 ; эта команда показывает правила игры
-(defn rules
+(defn rules []
 "Shows rools of game."
-  (str "Вам и другим игрокам нужно отгадать загаданное слово из 5 букв :)")
-  (str "Каждый игрок может угадывать слова, записывая их в консоль. После попытки отгадать слово, вам придет сообщение о том, угадано что-то или нет."))
+  (str "You and the other players need to guess the 5 letter word :)")
+  (str "Each player can guess words by writing them into the console. After trying to guess a word, you will receive a message about whether something is guessed or not."))
  
 (defn help
   "Show available commands and what they do."
