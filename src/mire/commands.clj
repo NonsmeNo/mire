@@ -32,7 +32,7 @@
      (str "You're not carrying a " thing "."))))
 
 
-(defn say-server ; Функция, которая показывает сообщение всем пользователям иекущей комнаты
+(defn say-server ; Функция, которая показывает сообщение всем пользователям текущей комнаты
   [& words]
   (let [message (str/join " " words)]
     (doseq [inhabitant (disj @(:inhabitants @player/*current-room*)
@@ -42,6 +42,12 @@
         (print player/prompt)))
     (str message)))
 
+; эта команда показывает правила игры
+(defn rules
+"Shows rools of game."
+  (str "Вам и другим игрокам нужно отгадать загаданное слово из 5 букв :)")
+  (str "Каждый игрок может угадывать слова, записывая их в консоль. После попытки отгадать слово, вам придет сообщение о том, угадано что-то или нет."))
+ 
 (defn help
   "Show available commands and what they do."
   []
@@ -101,6 +107,7 @@
                "help" help
                "start" start
                "skip" skip
+               "rules" rules
                "word" word})
 
 ;; Command handling
