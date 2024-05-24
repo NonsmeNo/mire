@@ -39,7 +39,7 @@
       (println (commands/look)) (print player/prompt) (flush)
 
       (try (loop [input (read-line)]
-             (when input
+             (when input 
                (println (commands/execute input))
                (.flush *err*)
                (print player/prompt) (flush)

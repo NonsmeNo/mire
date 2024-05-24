@@ -27,6 +27,8 @@
   (dosync
    (alter rooms load-rooms dir)))
 
+
+
 (defn room-contains?
   [room thing]
   (@(:items room) (keyword thing)))
