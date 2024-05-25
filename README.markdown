@@ -32,7 +32,8 @@
 # Пример игры
 После того, как игрок подключется, ему нужно оказать свое имя.
 Дальше он увидит приветствие:
-![image](https://github.com/NonsmeNo/mire/assets/113109207/28e444c3-8638-43ce-9c1f-6c976d0b4527)
+![image](https://github.com/NonsmeNo/mire/assets/113109207/9c931280-ce74-4674-88d8-6ee2627e290c)
+
 
 Если игрок не знает / забыл правила игры, он может ввести `rules`:
 ![image](https://github.com/NonsmeNo/mire/assets/113109207/abc781b3-08f3-479b-a3b3-0189e0057ef6)
