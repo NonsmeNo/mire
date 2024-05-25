@@ -45,8 +45,17 @@
 ; эта команда показывает правила игры
 (defn rules []
 "Shows rools of game."
-  (str "You and the other players need to guess the 5 letter word :)")
-  (str "Each player can guess words by writing them into the console. After trying to guess a word, you will receive a message about whether something is guessed or not."))
+  (println "")
+  (println "You and the other players need to guess a 5 letter word :)")
+  (println "Each player can guess words by writing them into the console.")
+  (println "After trying to guess a word, you will receive a message about whether something is guessed or not.")
+  (println "")
+  (println "--> The start command starts the game")
+  (println "--> The word [your word] command is an attempt to guess a word.")
+  (println "--> The skip command is needed if you are tired and can't guess the word")
+  (println "")
+  (println "If another player guesses the word before you, you will know about it. But you have all chances to become the winner!!!")
+  (println ""))
  
 (defn help
   "Show available commands and what they do."
