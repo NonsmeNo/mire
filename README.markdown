@@ -17,7 +17,13 @@
 **Начало игры:**
 
 * Сначала нужно зайти в какталог mire и выполнить команду `lein run` (так запустится сервер)
+  
+  ![image](https://github.com/NonsmeNo/mire/assets/113109207/68ec685f-cbe2-4a6a-bddb-5093f132b8e7)
+
 * Затем игроки смогут подключаться к серверу по `telnet localhost 3333`
+
+  ![image](https://github.com/NonsmeNo/mire/assets/113109207/c4dbe6f9-3943-4cb0-b867-3ca8babbfd05)
+
 * Все, можно играть!
   
 **Как играть:**
