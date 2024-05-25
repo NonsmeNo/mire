@@ -75,7 +75,7 @@
 
 (defn start [] ; начало игры
   (reset! current-word (random-word))
-  (say-server "I made up a 5-letter word. You have to guess it!"))
+  (str "I made up a 5-letter word. You have to guess it!"))
 
 (defn skip [] ; если пользователь не может угадать слово, скипает
   (if @current-word
@@ -86,7 +86,7 @@
     (str "No word to skip")))
 
 (defn word [guess] ; функция, которая сравнивает слово от пользователя с current-word
-  (say-server player/*name* ": word" guess)
+  (str player/*name* ": word" guess)
   (if @current-word
     
     (do
@@ -104,10 +104,10 @@
                                           guessed)
                                         guessed))]
                   (if (empty? guessed-letters)
-                    (say-server player/*name*", you didn't guess, try again :(")
-                    (say-server player/*name* ", you guessed the first " (/ (count guessed-letters) 2) " letters: " guessed-letters))))))
-        (say-server player/*name* ", the word must have 5 letters")))
-    (say-server "You need to start the game with the 'start' command first.")))
+                    (str player/*name*", you didn't guess, try again :(")
+                    (str player/*name* ", you guessed the first " (/ (count guessed-letters) 2) " letters: " guessed-letters))))))
+        (str player/*name* ", the word must have 5 letters")))
+    (str "You need to start the game with the 'start' command first.")))
 
 ;; Command data
 
